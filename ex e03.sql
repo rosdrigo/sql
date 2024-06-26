@@ -5,7 +5,7 @@ CREATE TABLE tb_escola(
 cadastro BIGINT AUTO_INCREMENT PRIMARY KEY,
 nome VARCHAR(255) NOT NULL,
 email VARCHAR(100) NOT NULL,
-nota DECIMAL(5,2) NOT NULL,
+nota DECIMAL(3,2) NOT NULL,
 tecnico BOOLEAN NOT NULL,
 dependencia BOOLEAN NOT NULL
 );
@@ -27,3 +27,5 @@ SELECT * FROM tb_escola WHERE nota < 7.0;
 UPDATE tb_escola SET nota = 7.50 WHERE nome = "Marcos Silva";
 
 SELECT * FROM tb_escola;
+
+ALTER TABLE tb_escola MODIFY nota DECIMAL(5,2);
